@@ -17,15 +17,47 @@ img {
 }
 
 .nav {
-  display: flex;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  justify-content: space-between;
-  margin-inline: 97.5px;
-  padding-inline: 32px;
-  padding-block: 24px;
+  z-index: 99;
+
+  &-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-inline: 97.5px;
+    padding-inline: 32px;
+    padding-block: 24px;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  list-style: none;
+  padding: 0;
+  margin-block: 0;
+  margin-right: 19.2px;
+  &-icon {
+    margin-inline: 9px;
+    margin-block: 18px;
+    font-size: 18px;
+  }
+}
+
+.menu {
+  font-size: 24px;
+  border: 0;
+  outline: 0;
+  color: white;
+  padding-inline: 6px;
+  padding-block: 1px;
+  background-color: rgba(0, 255, 255, 0);
 }
 
 .padding {
@@ -45,18 +77,36 @@ img {
   color: white;
   &-left {
     display: grid;
+    position: relative;
     grid-column: 1;
     grid-template-columns: auto auto;
+    padding-left: 24px;
+    margin-bottom: 32px;
+    display: block;
+    &-1 {
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 600;
+      left: -5px;
+      position: absolute;
+      transform: matrix(-1, 0, 0, -1, 0, 0);
+      writing-mode: vertical-lr;
+      bottom: 0;
+      &-green {
+        color: rgb(80, 165, 132);
+      }
+    }
   }
   &-right {
-    display: grid;
-    // justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
 .daytext {
   // transform: rotate(-90deg);
-  writing-mode: sideways-lr;
+  // writing-mode: sideways-lr;
 }
 
 .maintext {
@@ -73,10 +123,20 @@ img {
     font-size: 14px;
     // font-optical-sizing: none;
     font-weight: 400;
-    height: 53.1875px;
+    // height: 53.1875px;
     text-align: center;
     // justify-content: center;
     background-color: rgb(80, 165, 132);
+
+    padding-inline: 28.8px;
+    padding-block: 25.6px;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    vertical-align: top;
+    &-icon {
+      margin-right: 8px;
+    }
   }
   &-white {
     text-align: center;
@@ -85,15 +145,24 @@ img {
     font-size: 14px;
     // font-optical-sizing: none;
     font-weight: 400;
-    height: 53.1875px;
+    // height: 53.1875px;
     margin-left: 4px;
+
+    padding-inline: 28.8px;
+    padding-block: 25.6px;
+
+    justify-content: center;
+    position: relative;
+    &-icon {
+      margin-right: 8px;
+    }
   }
 }
 
 .playbot {
-  margin-top: 32px;
   display: grid;
-  grid-template-columns: auto auto;
+  margin-top: 32px;
+  grid-template-columns: 1.3fr 1fr;
   // background-color: aquamarine;
 }
 
